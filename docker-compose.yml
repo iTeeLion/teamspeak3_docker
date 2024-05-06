@@ -13,12 +13,9 @@ services:
       - '30033:30033'
       - '10010-10080:10010-10080'
     volumes:
-      - './data/t3server.sqlitedb:/opt/ts3/t3server.sqlitedb'
-      - './data/t3server.sqlitedb-shm:/opt/ts3/t3server.sqlitedb-shm'
-      - './data/t3server.sqlitedb-wal:/opt/ts3/t3server.sqlitedb-wal'
-      - './config/query_ip_allowlist.txt:/opt/ts3/query_ip_allowlist.txt'
-      - './config/query_ip_denylist.txt:/opt/ts3/query_ip_denylist.txt'
+      - './config:/opt/ts3/config'
+      - './data/data:/opt/ts3/data'
+      - './files:/opt/ts3/files'
       - './crashdumps:/opt/ts3/crashdumps'
       - './logs:/opt/ts3/logs'
-      - './files:/opt/ts3/files'
       

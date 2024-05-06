@@ -3,7 +3,7 @@ FROM debian
 ARG UID
 ARG GID
 
-RUN apt update && apt install -y tar wget
+RUN apt update && apt install -y tar bzip2 wget
 
 RUN useradd -U ts3 \
     && usermod -u $UID ts3 \

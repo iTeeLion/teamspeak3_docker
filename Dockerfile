@@ -28,7 +28,7 @@ RUN mkdir ./config \
     mkdir ./data \
     cp -n ./ts3server.sqlitedb ./data/ts3server.sqlitedb && rm ./ts3server.sqlitedb && ln -s ./data/ts3server.sqlitedb ./ts3server.sqlitedb \
     cp -n ./ts3server.sqlitedb-shm ./data/ts3server.sqlitedb-shm && rm ./ts3server.sqlitedb-shm && ln -s ./data/ts3server.sqlitedb-shm ./ts3server.sqlitedb-shm \
-    cp -n ./ts3server.sqlitedb-wal ./data/ts3server.sqlitedb-wal && rm ./ts3server.sqlitedb-wal && ln -s ./data/ts3server.sqlitedb-wal ./ts3server.sqlitedb-wal \
+    cp -n ./ts3server.sqlitedb-wal ./data/ts3server.sqlitedb-wal && rm ./ts3server.sqlitedb-wal && ln -s ./data/ts3server.sqlitedb-wal ./ts3server.sqlitedb-wal
 
 RUN echo "license_accepted=1" >> ./.ts3server_license_accepted
 

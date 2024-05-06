@@ -4,8 +4,8 @@ services:
     build: 
       context: 'https://raw.githubusercontent.com/iTeeLion/teamspeak3_docker/main/Dockerfile'
       args:
-        UID: ${UID}
-        GID: ${GID}
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
     restart: unless-stopped
     ports:
       - '9987:9987'

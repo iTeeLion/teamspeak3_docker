@@ -21,3 +21,4 @@ services:
       - './crashdumps:/opt/ts3/crashdumps'
       - './logs:/opt/ts3/logs'
       - './files:/opt/ts3/files'
+      

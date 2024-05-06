@@ -23,3 +23,4 @@ RUN cd ./teamspeak3-server_linux_amd64
 RUN echo "license_accepted=1" >> ./.ts3server_license_accepted
 
 RUN ./ts3server
+

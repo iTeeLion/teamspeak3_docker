@@ -22,8 +22,8 @@ RUN wget https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-
     && rm -rf ./teamspeak3-server_linux_amd64
 
 RUN mkdir ./config \
-    && rm -rf ./query_ip_allowlist.txt && cp -fs ./config/query_ip_allowlist.txt ./query_ip_allowlist.txt \
-    && rm -rf ./query_ip_denylist.txt && cp -fs ./config/query_ip_denylist.txt ./query_ip_denylist.txt \
+    && cp -fs ./config/query_ip_allowlist.txt ./query_ip_allowlist.txt \
+    && cp -fs ./config/query_ip_denylist.txt ./query_ip_denylist.txt \
     && mkdir ./data \
     && cp -n ./ts3server.sqlitedb ./data/ts3server.sqlitedb && rm ./ts3server.sqlitedb && cp -fs ./data/ts3server.sqlitedb ./ts3server.sqlitedb \
     && cp -n ./ts3server.sqlitedb-shm ./data/ts3server.sqlitedb-shm && rm ./ts3server.sqlitedb-shm && cp -fs ./data/ts3server.sqlitedb-shm ./ts3server.sqlitedb-shm \

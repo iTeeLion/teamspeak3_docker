@@ -20,7 +20,7 @@ services:
     image: mariadb
     restart: always
     ports:
-      - ${PORT_VOICE:-33306}:3306
+      - ${PORT_VOICE:-30036}:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASS}
       MYSQL_DATABASE: ${DB_NAME:-teamspeak}

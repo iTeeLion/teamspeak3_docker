@@ -5,7 +5,7 @@ ARG GID
 
 RUN apt update && apt install -y sudo wget
 
-RUN useradd -u -U -G ts3 ts3 \
+RUN useradd -U -G ts3 ts3 \
     && RUN usermod -u $UID ts3 \
     && groupmod -g $GID ts3
 

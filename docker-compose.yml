@@ -2,11 +2,15 @@ version: '3.8'
 services:
   teamspeak:
     image: teamspeak
-    restart: always
+    restart: unless-stopped
     ports:
-      - 9987:9987/udp
-      - 10011:10011
-      - 30033:30033
+      - ${PORT_VOICE:-9987}:9987/udp
+      - ${PORT_QUERY:-10011}:10011
+      - ${PORT_FILES:-30033}:30033
+    volumes:
+      - './files:/opt/ts3/files'
+      - './crashdumps:/opt/ts3/crashdumps'
+      - './logs:/opt/ts3/logs'
     environment:
       TS3SERVER_DB_PLUGIN: ts3db_mariadb
       TS3SERVER_DB_SQLCREATEPATH: create_mariadb

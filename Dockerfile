@@ -20,7 +20,7 @@ RUN wget https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-
     && rm ./teamspeak3-server_linux_amd64-3.13.7.tar.bz2
 
 RUN cp -R ./teamspeak3-server_linux_amd64/* /opt/ts3 \
-    && rm ./teamspeak3-server_linux_amd64
+    && rm -r ./teamspeak3-server_linux_amd64
 
 RUN echo "license_accepted=1" >> ./.ts3server_license_accepted
 

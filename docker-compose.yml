@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  ts3:
+  app:
     image: teamspeak
     restart: unless-stopped
     ports:
